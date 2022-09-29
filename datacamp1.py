@@ -1,6 +1,7 @@
-numpy and matplotlib imported, seed set
+import numpy as np
+import matplotlib.pyplot as plt
 
-Simulate random walk 500 times
+#Simulate random walk 500 times
 all_walks = []
 for i in range(500) :
     random_walk = [0]
@@ -18,12 +19,12 @@ for i in range(500) :
         random_walk.append(step)
     all_walks.append(random_walk)
 
-Create and plot np_aw_t
+#Create and plot np_aw_t
 np_aw_t = np.transpose(np.array(all_walks))
 
-Select last row from np_aw_t: ends
+#Select last row from np_aw_t: ends
 ends = np_aw_t[-1, :]
 
-Plot histogram of ends, display plot
+#Plot histogram of ends, display plot
 plt.hist(ends)
 plt.show()
